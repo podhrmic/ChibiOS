@@ -3,6 +3,8 @@
 *.ko
 *.obj
 *.elf
+*.d
+*.lst
 
 # Precompiled Headers
 *.gch
@@ -27,3 +29,9 @@
 *.i*86
 *.x86_64
 *.hex
+
+# project files
+*.project
+
+# temporary files
+*~
