@@ -32,6 +32,7 @@
 
 # project files
 *.project
+*.cproject
 
 # temporary files
 *~
