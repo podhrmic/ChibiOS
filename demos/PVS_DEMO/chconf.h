@@ -1,12 +1,6 @@
 /*
     ChibiOS/RT - Copyright (C) 2006-2013 Giovanni Di Sirio
 
-    modified by: AggieAir, A Remote Sensing Unmanned Aerial System for Scientific Applications
-    Utah State University, http://aggieair.usu.edu/
-
-    Michal Podhradsky (michal.podhradsky@aggiemail.usu.edu)
-    Calvin Coopmans (c.r.coopmans@ieee.org)
-
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -47,7 +41,7 @@
  *          setting also defines the system tick time unit.
  */
 #if !defined(CH_FREQUENCY) || defined(__DOXYGEN__)
-#define CH_FREQUENCY                    10000
+#define CH_FREQUENCY                    1000
 #endif
 
 /**
@@ -490,7 +484,7 @@
  */
 #if !defined(THREAD_CONTEXT_SWITCH_HOOK) || defined(__DOXYGEN__)
 #define THREAD_CONTEXT_SWITCH_HOOK(ntp, otp) {                              \
-  /* System halt code here.*/                                               \
+  /* Context switch code here.*/                                            \
 }
 #endif
 
@@ -511,7 +505,7 @@
  */
 #if !defined(SYSTEM_TICK_EVENT_HOOK) || defined(__DOXYGEN__)
 #define SYSTEM_TICK_EVENT_HOOK() {                                          \
-                                                                            \
+  /* System tick event code here.*/                                         \
 }
 #endif
 

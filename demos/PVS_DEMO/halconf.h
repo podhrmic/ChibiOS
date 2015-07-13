@@ -1,12 +1,6 @@
 /*
     ChibiOS/RT - Copyright (C) 2006-2013 Giovanni Di Sirio
 
-    modified by: AggieAir, A Remote Sensing Unmanned Aerial System for Scientific Applications
-    Utah State University, http://aggieair.usu.edu/
-
-    Michal Podhradsky (michal.podhradsky@aggiemail.usu.edu)
-    Calvin Coopmans (c.r.coopmans@ieee.org)
-
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
     You may obtain a copy of the License at
@@ -35,11 +29,6 @@
 #define _HALCONF_H_
 
 #include "mcuconf.h"
-
-/**
- * @brief   Hard define the buffer size for serial ports
- */
-#define SERIAL_BUFFERS_SIZE         1024
 
 /**
  * @brief   Enables the TM subsystem.
