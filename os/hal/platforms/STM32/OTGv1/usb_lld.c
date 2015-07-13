@@ -533,11 +533,11 @@ static bool_t otg_txfifo_handler(USBDriver *usbp, usbep_t ep) {
                                  n);
       usbp->epc[ep]->in_state->mode.linear.txbuf += n;
     }
-    usbp->epc[ep]->in_state->txcnt += n;
-  }
 #if STM32_USB_OTGFIFO_FILL_BASEPRI
   __set_BASEPRI(0);
 #endif
+    usbp->epc[ep]->in_state->txcnt += n;
+  }
 }
 
 /**
@@ -984,17 +984,17 @@ void usb_lld_stop(USBDriver *usbp) {
     otgp->GAHBCFG    = 0;
     otgp->GCCFG      = 0;
 
-#if STM32_USB_USE_USB1
+#if STM32_USB_USE_OTG1
     if (&USBD1 == usbp) {
       nvicDisableVector(STM32_OTG1_NUMBER);
-      rccDisableOTG1(FALSE);
+      rccDisableOTG_FS(FALSE);
     }
 #endif
 
-#if STM32_USB_USE_USB2
+#if STM32_USB_USE_OTG2
     if (&USBD2 == usbp) {
       nvicDisableVector(STM32_OTG2_NUMBER);
-      rccDisableOTG2(FALSE);
+      rccDisableOTG_HS(FALSE);
     }
 #endif
   }

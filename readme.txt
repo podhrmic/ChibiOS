@@ -71,7 +71,37 @@
 *** Releases                                                              ***
 *****************************************************************************
 
+*** 2.6.9 ***
+- NEW: Added files for Core407V board.
+- FIX: Removed call to localtime_r() for non-GNU compilers in chrtclib.c.
+- FIX: SPE-related issue in e200z ports (bug #607).
+- FIX: Fixed wrong macro names in STM32F0xx HAL driver (bug #605).
+- FIX: Fixed wrong macro names in STM32F3xx HAL driver (bug #603).
+- FIX: Fixed STM32 RTCv2 driver missing RTC_SUPPORTS_CALLBACKS macro
+  (bug #602).
+- FIX: Fixed errors in STM32 OTGv1 driver (bug #601).
+- FIX: Fixed issue in DMA drivers when channels share ISRs (bug #597).
+- FIX: Fixed STM32 USARTv1: incorrect txend2_cb callback behaviour (bug #596).
+
+*** 2.6.8 ***
+- FIX: Fixed spurious TC interrupt in STM32 UART (v1 and v2) driver (bug #584).
+- FIX: Fixed invalid checks on STM32L1xx LSI and LSE clocks (bug #583).
+- FIX: Fixed RCC CAN2 macros missing in STM32F1xx platform (bug #582).
+- FIX: Fixed misplaced __set_BASEPRI() in STM32 OTGv1 driver (bug #566).
+- FIX: Fixed typo in code doc of chOQWriteTimeout function (bug #565).
+- FIX: Fixed wrong condition check in MMC_SPI driver (bug #564).
+- FIX: Fixed wrong boolean operators in mutexes module (bug #563).
+- FIX: Fixed missing macro in STM32 USBv1 and OTGv1 drivers (bug #562).
+- FIX: Fixed wrong paths for OLIMEX_STM32-E407_REV_D board (bug #561).
+- FIX: Fixed wrong TIM1/8_CLK on STM32F30x when using PCLK2 with prescaler
+  (bug #557).
+- FIX: Fixed STM32 USARTv1: serial interrupt hang on overrun (and other) error
+  (bug #558).
+
 *** 2.6.7 ***
+- FIX: Fixed random R0 register corruption in Keil ARMCMx port when FPU
+  is enabled (bug #556).
+- FIX: Fixed wrong CORTEX_PRIORITY_PENDSV value in ARMCMx ports (bug #555).
 - FIX: Safer ADC start for STM32F4 and STM32L1.
 - FIX: AT91SAM7 SPI1 undocumented errata on manual CS manipulation.
 - FIX: AT91SAM7 SPI set CS pin mode.
