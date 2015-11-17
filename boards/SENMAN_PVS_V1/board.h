@@ -32,6 +32,7 @@
  */
 #define BOARD_PHY_ID                MII_KSZ8081MLX_ID
 #define BOARD_PHY_MII
+#define BOARD_PHY_ADDRESS 0x00001
 
 /*
  * Board oscillators-related settings.
