@@ -65,7 +65,7 @@ bool_t sdc_lld_is_card_inserted(SDCDriver *sdcp) {
 
   if (blkIsTransferring(sdcp))
     return last_status;
-  return last_status = (bool_t)palReadPad(GPIOC, GPIOC_SD_D3);
+  return last_status = (bool_t)palReadPad(GPIOC, 0);
 }
 
 /**

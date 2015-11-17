@@ -309,7 +309,7 @@ __attribute__((noreturn))  int main(void) {
    * Activates the serial driver 1 & 3 using the driver default configuration.
    */
   sdStart(&SD1, &usart1_config);
-  sdStart(&SD2, &usart2_config);
+  //sdStart(&SD2, &usart2_config);
   sdStart(&SD3, &usart3_config);
 
   /*
